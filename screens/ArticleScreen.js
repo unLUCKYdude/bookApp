@@ -46,7 +46,7 @@ const ArticleScreen = ({ route, navigation }) => {
     }, []);
 
     return <View style={{flex: 1, backgroundColor: "#fff"}}>
-        <View style={{backgroundColor: "#9400d3", minHeight: 60, flexDirection: "row", alignItems: "center"}}>
+        <View style={{backgroundColor: "#f39c12", minHeight: 60, flexDirection: "row", alignItems: "center"}}>
             <TouchableOpacity onPress={navigation.goBack} style={{padding: 16}}>
                 <Ionicon name="arrow-back" size={25} color="#fff" />
             </TouchableOpacity>

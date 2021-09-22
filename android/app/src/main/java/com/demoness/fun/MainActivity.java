@@ -1,4 +1,4 @@
-package com.demoness.fun;
+package com.demoness.sex;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;

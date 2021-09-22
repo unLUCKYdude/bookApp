@@ -59,7 +59,7 @@ const Drawer = ({ categories, closeDrawer, articles, readArticles, favoriteArtic
     const readSortedArticles = articles.filter(item => !readArticles.includes(item.date)).sort((a, b) => a.title.toLowerCase() - b.title.toLowerCase());
 
     return <View style={{flex: 1}}>
-        <View style={{backgroundColor: "#9400d3", height: 60, justifyContent: "space-between", paddingLeft: 16, flexDirection: "row", alignItems: "center"}}>
+        <View style={{backgroundColor: "#f39c12", height: 60, justifyContent: "space-between", paddingLeft: 16, flexDirection: "row", alignItems: "center"}}>
             <Text style={{fontFamily: "OpenSansCondensed-Bold", color: "#fff", fontSize: 24}}>Меню</Text>
             <TouchableOpacity style={{padding: 16}} onPress={closeDrawer}>
                 <Ionicon name="close" size={30} color="#fff" />
@@ -82,6 +82,7 @@ const Drawer = ({ categories, closeDrawer, articles, readArticles, favoriteArtic
             img={require("../src/dice-icon.png")}
             text="Случайная статья"
             onPress={() => {
+                if (!articles.length) return;
                 const index = Math.floor(Math.random() * articles.length);
                 closeDrawer();
                 navigation.popToTop();
@@ -107,7 +108,7 @@ const Drawer = ({ categories, closeDrawer, articles, readArticles, favoriteArtic
         <ActionItem
             icon="share-social"
             text="Поделиться"
-            onPress={() => Share.share({message: "market://details?id=com.kleientertainment.doNotStarvePocket"})}
+            onPress={() => Share.share({message: "market://details?id=com.demoness.sex"})}
         />
         <ActionItem
             icon="stats-chart"
@@ -129,7 +130,7 @@ const Drawer = ({ categories, closeDrawer, articles, readArticles, favoriteArtic
             animationOut="slideOutDown"
         >
             <View style={{flex: 0.8, overflow: "hidden"}}>
-                <View style={{backgroundColor: "#9400d3", height: 60, flexDirection: "row", alignItems: "center", paddingRight: 16, borderTopLeftRadius: 16, borderTopRightRadius: 16 }}>
+                <View style={{backgroundColor: "#f39c12", height: 60, flexDirection: "row", alignItems: "center", paddingRight: 16, borderTopLeftRadius: 16, borderTopRightRadius: 16 }}>
                     <TouchableOpacity onPress={() => setIsSearchOpen(false)} style={{padding: 16, marginRight: 48}}>
                         <Ionicon name="chevron-down" size={25} color="#fff" />
                     </TouchableOpacity>
@@ -171,7 +172,7 @@ const Drawer = ({ categories, closeDrawer, articles, readArticles, favoriteArtic
             animationOut="fadeOutRight"
         >
             <View style={{flex: 1, backgroundColor: "#fff"}}>
-                <View style={{backgroundColor: "#9400d3", height: 60, flexDirection: "row", alignItems: "center", paddingRight: 16 }}>
+                <View style={{backgroundColor: "#f39c12", height: 60, flexDirection: "row", alignItems: "center", paddingRight: 16 }}>
                     <TouchableOpacity onPress={() => setIsFavoriteOpen(false)} style={{padding: 16, marginRight: 24}}>
                         <Ionicon name="arrow-back" size={25} color="#fff" />
                     </TouchableOpacity>
@@ -200,7 +201,7 @@ const Drawer = ({ categories, closeDrawer, articles, readArticles, favoriteArtic
             animationOut="fadeOutRight"
         >
             <View style={{flex: 1, backgroundColor: "#fff"}}>
-                <View style={{backgroundColor: "#9400d3", height: 60, flexDirection: "row", alignItems: "center", paddingRight: 16 }}>
+                <View style={{backgroundColor: "#f39c12", height: 60, flexDirection: "row", alignItems: "center", paddingRight: 16 }}>
                     <TouchableOpacity onPress={() => setIsReadOpen(false)} style={{padding: 16, marginRight: 24}}>
                         <Ionicon name="arrow-back" size={25} color="#fff" />
                     </TouchableOpacity>

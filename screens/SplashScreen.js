@@ -46,8 +46,8 @@ const Loader = ({ value }) => {
         }).start();
     }, [value]);
 
-    return <View style={{marginVertical: 14}}>
-        <Animated.View style={{width: w, height: 4, backgroundColor: "#9400d3", transform: [{ translateX }]}} />
+    return <View style={{marginBottom: 24}}>
+        <Animated.View style={{width: w, height: 4, backgroundColor: "#fff", transform: [{ translateX }]}} />
     </View>;
 }
 
@@ -60,7 +60,7 @@ const SplashScreen = ({ navigation }) => {
         <Animated.View style={{flex: 1, opacity}}>
             <ImageBackground
                 source={require("../src/splash-image.jpg")}
-                style={{flex: 1, alignItems: "center", justifyContent: "flex-end", paddingBottom: 32}}
+                style={{flex: 1, paddingBottom: 40}}
                 onLoad={() => {
                     Animated.timing(opacity, {
                         useNativeDriver: true,
@@ -70,9 +70,10 @@ const SplashScreen = ({ navigation }) => {
                     init(navigation.replace, setValue);
                 }}
             >
-                <Text style={{color: "#572d45", fontSize: 56, lineHeight: 68, fontFamily: "OpenSansCondensed-Bold", textAlign: "center"}}>ПСИХОЛОГИЯ ОТНОШЕНИЙ</Text>
-                <Loader value={value} />
-                <Text style={{color: "#0a3353", fontSize: 24, fontFamily: "OpenSansCondensed-Bold"}}>жизнь семья любовь</Text>
+                <Text style={{color: "#fff", fontSize: 48, fontFamily: "Caveat-Bold", width: w * 0.71, textAlign: "center", marginTop: 120}}>Уроки секса</Text>
+                <View style={{flex: 1, justifyContent: "flex-end"}}>
+                    <Loader value={value} />
+                </View>
             </ImageBackground>
         </Animated.View>
     </View>

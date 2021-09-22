@@ -8,7 +8,7 @@ import Ionicon from "react-native-vector-icons/Ionicons";
 
 const NoInternetScreen = ({ navigation }) => {
     return <View style={{flex: 1, backgroundColor: "#fff"}}>
-        <View style={{backgroundColor: "#9400d3", height: 40, alignItems: "center", justifyContent: "center"}}>
+        <View style={{backgroundColor: "#f39c12", height: 40, alignItems: "center", justifyContent: "center"}}>
             <Text style={{fontFamily: "OpenSansCondensed-Bold", marginLeft: 16, color: "#fff"}}>Проверьте интернет-подключение</Text>
         </View>
         <View style={{flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 36}}>
@@ -16,7 +16,7 @@ const NoInternetScreen = ({ navigation }) => {
             <Text style={{fontFamily: "OpenSansCondensed-Bold", color: "#000", fontSize: 24, textAlign: "center", marginTop: 16}}>Ошибка при получении данных с сервера</Text>
             <View style={{borderRadius: 8, overflow: "hidden", marginTop: 72}}>
                 <Pressable
-                    style={{flexDirection: "row", alignItems: "center", backgroundColor: "#9400d3", paddingHorizontal: 16, paddingVertical: 12}}
+                    style={{flexDirection: "row", alignItems: "center", backgroundColor: "#f39c12", paddingHorizontal: 16, paddingVertical: 12}}
                     android_ripple={{color: "#000"}}
                     onPress={() => navigation.replace("Splash")}
                 >

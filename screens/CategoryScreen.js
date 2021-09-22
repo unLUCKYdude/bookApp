@@ -35,7 +35,7 @@ const CategoryScreen = ({ route, navigation }) => {
     const filteredArticles = articles.filter(item => item.title.toLowerCase().includes(text.toLowerCase())).sort((a, b) => a.title.toLowerCase() - b.title.toLowerCase());
 
     return <View style={{flex: 1, backgroundColor: "#fff"}}>
-        <View style={{backgroundColor: "#9400d3", height: 60, flexDirection: "row", alignItems: "center"}}>
+        <View style={{backgroundColor: "#f39c12", height: 60, flexDirection: "row", alignItems: "center"}}>
             <TouchableOpacity onPress={navigation.goBack} style={{padding: 16, marginRight: 32}}>
                 <Ionicon name="arrow-back" size={25} color="#fff" />
             </TouchableOpacity>
@@ -53,13 +53,13 @@ const CategoryScreen = ({ route, navigation }) => {
                 <Ionicon name="menu" size={30} color="#fff" />
             </TouchableOpacity>
         </View>
-        <View style={{flexDirection: "row", padding: 16, alignItems: "center", borderBottomColor: "#9400d3", borderBottomWidth: 3}}>
+        <View style={{flexDirection: "row", padding: 16, alignItems: "center", borderBottomColor: "#f39c12", borderBottomWidth: 3}}>
             <Text style={{fontFamily: "OpenSansCondensed-Bold", fontSize: 24}}>Категория:</Text>
             <Text style={{
                 fontFamily: "OpenSansCondensed-Bold",
                 fontSize: 18,
                 marginLeft: 16,
-                backgroundColor: "#9400d3",
+                backgroundColor: "#f39c12",
                 color: "#fff",
                 paddingHorizontal: 14,
                 paddingVertical: 8,

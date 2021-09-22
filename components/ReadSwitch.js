@@ -36,8 +36,8 @@ const ReadSwitch = ({ isRead, check }) => {
         <TouchableOpacity onPress={() => check(false)} style={{paddingVertical: 16}}>
             <Animated.Text style={{fontFamily: "OpenSansCondensed-Bold", fontSize: 16, color: "#1e272e", opacity: opacity1}}>Не прочитано</Animated.Text>
         </TouchableOpacity>
-        <Pressable style={{width: 40, height: 24, borderRadius: 12, borderWidth: 2, borderColor: "#9400d3", marginHorizontal: 12, padding: 2}} onPress={() => check(!isRead)}>
-            <Animated.View style={{width: 16, height: 16, borderRadius: 8, backgroundColor: "#9400d3", transform: [{ translateX }]}} />
+        <Pressable style={{width: 40, height: 24, borderRadius: 12, borderWidth: 2, borderColor: "#f39c12", marginHorizontal: 12, padding: 2}} onPress={() => check(!isRead)}>
+            <Animated.View style={{width: 16, height: 16, borderRadius: 8, backgroundColor: "#f39c12", transform: [{ translateX }]}} />
         </Pressable>
         <TouchableOpacity onPress={() => check(true)} style={{paddingVertical: 16}}>
             <Animated.Text style={{fontFamily: "OpenSansCondensed-Bold", fontSize: 16, color: "#1e272e", opacity: opacity2}}>Прочитано</Animated.Text>

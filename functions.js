@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const domain = "https://psaa2021.github.io";
-export const interstitialID = "c298d68851c006f7";
+const domain = "https://psaa2021.github.io/sex";
+export const interstitialID = "dc074d5d1b949b45";
 
 const makeRequest = async url => {
     try {
